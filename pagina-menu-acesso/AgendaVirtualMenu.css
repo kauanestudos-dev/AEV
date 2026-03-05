@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* corpo do site */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
@@ -12,17 +13,7 @@ body {
   line-height: 1.6;
 }
 
-.header-top i {
-  margin-right: 5px;
-}
-
-.header-top a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-/* Logo e Menu */
+/* parte superior */
 .header-main {
   display: flex;
   justify-content: space-between;
@@ -33,13 +24,14 @@ body {
   color: #333;
 }
 
-/* Container da logo: imagem + título */
+/*logo imagem + título */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+/*ajuste da logo*/
 .logo-img {
   width: 60px;
   height: 60px;
@@ -47,31 +39,21 @@ body {
   object-fit: cover;
 }
 
+/*ajuste do titulo principal*/
 .logo-text {
   font-size: 1.8rem;
   font-weight: bold;
   color: #191e2b;
 }
 
-
+/*ajuste do nome virtual*/
 .logo-text span1 {
   color: #253045;
 }
 
-.nav-menu {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
+/*botão acessar plataforma */
 .btn-primary {
-  background-color: #00c6e6;
+  background-color: #0c345b;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -80,7 +62,7 @@ body {
   transition: 0.3s;
 }
 
-/* Hero Section */
+/* ajuste banner meio */
 .hero {
   background-image: url("https://i.ibb.co/MxpWFrS0/crian-as-fudo-do-site.png");
   background-size: cover;
@@ -93,6 +75,7 @@ body {
   color: white;
 }
 
+/*banner meio*/
 .hero::before {
   content: '';
   position: absolute;
@@ -104,25 +87,29 @@ body {
   z-index: 1;
 }
 
+/*ajuste texto banner*/
 .hero-content {
   max-width: 800px;
   z-index: 2;
   position: relative;
 }
 
+/*ajuste texto banner*/
 .hero h1 {
   margin-bottom: 15px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
+/*ajuste do paragrafo banner*/
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 20px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
+/*botão saiba mais*/
 .hero .btn-primary {
-  background-color: #00c6e6;
+  background-color: #0c345b;
   color: white;
   padding: 12px 25px;
   font-size: 1.1rem;
@@ -137,6 +124,7 @@ body {
   flex-wrap: wrap;
 }
 
+/*configuração pilares*/
 .pilar {
   flex: 1;
   min-width: 280px;
@@ -149,14 +137,16 @@ body {
   transition: transform 0.3s ease;
 }
 
+/*ajuste  pilar*/
 .pilar h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #191e2b;
 }
 
+/*textos pilares*/
 .pilar p {
-  font-size: 0.95rem;
+  font-size: .95rem;
   color: #666;
 }
 
@@ -167,8 +157,15 @@ body {
 }
 
 /* Footer */
+
+/*texto fale conosco*/
+.contato{
+  text-align: right;
+}
+
+/*parte inferior*/
 footer {
-  background: rgb(39, 58, 133);
+  background: rgb(25 25 25);
   color: #bfc0d1;
   text-align: left;
   padding: 20px;
@@ -176,26 +173,13 @@ footer {
   border-top: 1px solid #253045;
 }
 
+/*formulario de contato*/
 form.ajuda{
   border: none;
 }
 
+/*links fim de pagina*/
 footer a {
-  color: #00c6e6;
+  color: #13e0ff;
   text-decoration: none;
-}
-
-.header-top {
-  background-color: hsl(223, 26%, 13%);
-  color: #ffffff;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  font-size: 14px;
-}
-
-.header-top div {
-  display: flex;
-  gap: 30px;
-  align-items: center;
 }
