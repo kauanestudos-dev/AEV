@@ -156,7 +156,7 @@ body {
 
 }
 
-/* Footer */
+/* fim de pagina */
 
 /*texto fale conosco*/
 .contato{
@@ -165,7 +165,7 @@ body {
 
 /*parte inferior*/
 footer {
-  background: rgb(25 25 25);
+  background: #0c345b;
   color: #bfc0d1;
   text-align: left;
   padding: 20px;
