@@ -7,7 +7,7 @@
  /*configuração geral do site*/
  .caixa-maior {
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   background-image: url("https://i.ibb.co/rKtsXr1x/imagem-de-fundo.png");
+   background-image: url("/img/planodefundo.jpg");
    background-size: cover;
    background-position: center;
    display: flex;
@@ -52,12 +52,12 @@
  }
 
  .form-group input:focus {
-   border-color: #00c6e6;
+   border-color: #10477C;
    outline: none;
  }
 
  button {
-   background-color: #00c6e6;
+   background-color: #10477C;
    text-align: center;
    text-decoration: none;
    color: white;
@@ -78,7 +78,7 @@
  }
 
  .login-link a {
-   color: #00c6e6;
+   color: #10477C;
    text-decoration: none;
  }
 

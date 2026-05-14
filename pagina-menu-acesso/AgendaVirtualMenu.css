@@ -26,6 +26,7 @@ body {
 
 /*logo imagem + título */
 .logo-container {
+  image-resolution: url(/img/agendaescolar.png);
   display: flex;
   align-items: center;
   gap: 15px;
@@ -33,7 +34,6 @@ body {
 
 /*ajuste da logo*/
 .logo-img {
-  width: 60px;
   height: 60px;
   border-radius: 8px;
   object-fit: cover;
@@ -64,7 +64,7 @@ body {
 
 /* ajuste banner meio */
 .hero {
-  background-image: url("https://i.ibb.co/MxpWFrS0/crian-as-fudo-do-site.png");
+  background-image: url("/img/planodefundo.jpg");
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -111,18 +111,60 @@ body {
 .hero .btn-primary {
   background-color: #0c345b;
   color: white;
-  padding: 12px 25px;
+  padding: 10px 25px;
   font-size: 1.1rem;
 }
 
 /* Pilares */
 .pilares {
   display: flex;
+  gap: 30px;
+  padding: 60px 5%;
+  flex-wrap: wrap;
+
+  .pilar {
+    background-color: #10477c;
+    color: yellowgreen;
+  }
+  
+}
+
+/*quadrados serviços*/
+.quadrados {
+  display: flex;
   justify-content: center;
   gap: 30px;
   padding: 60px 5%;
   flex-wrap: wrap;
 }
+
+.quadrado {
+  display: contents;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(0, 0, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*configuração pilares*/
 .pilar {
@@ -147,7 +189,7 @@ body {
 /*textos pilares*/
 .pilar p {
   font-size: .95rem;
-  color: #666;
+  color: #667;
 }
 
 /*centro do site */
@@ -159,13 +201,13 @@ body {
 /* fim de pagina */
 
 /*texto fale conosco*/
-.contato{
+.contato {
   text-align: right;
 }
 
 /*parte inferior*/
 footer {
-  background: #0c345b;
+  background: #252525;
   color: #bfc0d1;
   text-align: left;
   padding: 20px;
@@ -174,7 +216,7 @@ footer {
 }
 
 /*formulario de contato*/
-form.ajuda{
+form.ajuda {
   border: none;
 }
 

@@ -6,8 +6,9 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-image: url("https://i.ibb.co/rKtsXr1x/imagem-de-fundo.png");
+      background-image: url("/img/planodefundo.jpg");
       background-size: cover;
+      background-position: center;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -49,12 +50,12 @@
     }
 
     .form-group input:focus {
-      border-color: #00c6e6;
+      border-color: #10477C;
       outline: none;
     }
 
     .submit-btn {
-      background-color: #00c6e6;
+      background-color: #10477C;
       color: white;
       border: none;
       padding: 14px;
@@ -67,7 +68,7 @@
     }
 
     .submit-btn:hover {
-      background-color: #00a6c7;
+      background-color: #10477C;
     }
 
     .login-link {
@@ -77,7 +78,7 @@
     }
 
     .login-link a {
-      color: #00c6e6;
+      color: #10477C;
       text-decoration: none;
     }
 
