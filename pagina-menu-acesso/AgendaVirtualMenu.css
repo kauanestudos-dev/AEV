@@ -1,206 +1,288 @@
-/* alinhamento do site */
+
+:root {
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Roboto', sans-serif;
+    --color-dark: #1a1a1a;
+    --color-light: #ffffff;
+    --color-gray: #f4f4f4;
+    --color-text: #777;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* corpo do site */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background-color: #f8f9fa;
-  line-height: 1.6;
+    font-family: var(--font-sans);
+    color: var(--color-dark);
+    line-height: 1.6;
 }
 
-/* parte superior */
-.header-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5%;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: #333;
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* --- Utilitários --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/*logo imagem + título */
-.logo-container {
-  image-resolution: url(/img/agendaescolar.png);
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.btn {
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: capitalize;
 }
 
-/*ajuste da logo*/
-.logo-img {
-  height: 60px;
-  border-radius: 8px;
-  object-fit: cover;
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
 }
 
-/*ajuste do titulo principal*/
-.logo-text {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #191e2b;
+.btn-outline:hover {
+    background: #10477C;
 }
 
-/*ajuste do nome virtual*/
-.logo-text span1 {
-  color: #253045;
+
+/* --- Header / Hero --- */
+.hero-section {
+    height: 100vh;
+    min-height: 700px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('Images/ImgFundo.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-light);
+    position: relative;
 }
 
-/*botão acessar plataforma */
-.btn-primary {
-  background-color: #0c345b;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
 }
 
-/* ajuste banner meio */
-.hero {
-  background-image: url("/img/planodefundo.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  padding: 0 5%;
-  position: relative;
-  color: white;
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 
-/*banner meio*/
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
 
-/*ajuste texto banner*/
-.hero-content {
-  max-width: 800px;
-  z-index: 2;
-  position: relative;
+.nav-links li a {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-/*ajuste texto banner*/
-.hero h1 {
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+.nav-icons {
+    display: flex;
+    gap: 15px;
 }
 
-/*ajuste do paragrafo banner*/
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+.hero-content h5 {
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
-/*botão saiba mais*/
-.hero .btn-primary {
-  background-color: #0c345b;
-  color: white;
-  padding: 10px 25px;
-  font-size: 1.1rem;
+.hero-content .main-title {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
-/* Pilares */
-.pilares {
-  display: flex;
-  gap: 30px;
-  padding: 60px 5%;
-  flex-wrap: wrap;
-
-  .pilar {
-    background-color: #10477c;
-    color: rgb(255, 255, 255);
-  }
-  
+.hero-content .subtitle {
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
 }
 
-/*quadrados serviços*/
-.quadrados {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 5%;
-  flex-wrap: wrap;
+/* --- Refined & Professional --- */
+.refined-section {
+    padding: 100px 0;
+    background-color: var(--color-light);
 }
 
-.quadrado {
-  display: contents;
-  width: 200px;
-  height: 200px;
-  background-color: rgb(0, 0, 255);
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 60px;
 }
 
-/*configuração pilares*/
-.pilar {
-  flex: 1;
-  min-width: 280px;
-  background: white;
-  color: #333;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.336);
-  transition: transform 0.3s ease;
+.text-content {
+    flex: 1;
 }
 
-/*ajuste  pilar*/
-.pilar h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #191e2b;
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-/*textos pilares*/
-.pilar p {
-  font-size: .95rem;
-  color: #667;
+.lead-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/*centro do site */
-.title {
-  text-align: center;
-
+.body-text {
+    color: var(--color-text);
+    margin-bottom: 30px;
+    font-size: 0.95rem;
 }
 
-/* fim de pagina */
-
-/*texto fale conosco*/
-.contato {
-  text-align: right;
+/* Grid de Simulação (Collage) */
+.visual-content {
+    flex: 1.2;
 }
 
-/*parte inferior*/
-footer {
-  background: #252525;
-  color: #bfc0d1;
-  text-align: left;
-  padding: 20px;
-  margin-top: 60px;
-  border-top: 1px solid #253045;
+.layout-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 180px);
+    gap: 15px;
 }
 
-/*formulario de contato*/
-form.ajuda {
-  border: none;
+.preview-box {
+    background-color: var(--color-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/*links fim de pagina*/
-footer a {
-  color: #13e0ff;
-  text-decoration: none;
+.preview-box.about-us {
+    background-image: url('2202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+    background-size: cover;
+}
+
+.preview-box.details {
+    background: white;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.preview-box.story {
+    background: #3b6df0;
+    color: white;
+}
+
+.preview-box.grid-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.mini-img {
+    background: #ddd;
+    height: 100%;
+}
+
+.mini-img:nth-child(3) { background: #555; }
+.mini-img:nth-child(4) { background: #888; }
+
+/* --- Beautiful Navigation --- */
+.nav-section {
+    padding: 100px 0;
+    background-color: #111;
+    color: var(--color-light);
+}
+
+.nav-section .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-section .body-text {
+    color: #aaa;
+}
+
+.nav-section .section-title {
+    color: white;
+}
+
+/* Simulação do Menu Mobile */
+.nav-demo-content {
+    flex: 1;
+    height: 400px;
+    background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.demo-phone-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-list span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #888;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-list span:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+/* --- Responsividade Básica --- */
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        display: none; /* Simplificado para mobile */
+    }
+
+    .hero-content .main-title {
+        font-size: 2.5rem;
+    }
 }
